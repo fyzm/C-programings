@@ -1,2 +1,2 @@
-# C-programings
-###add some c-programing practice
+## frist commit 
+###study C++ Base
