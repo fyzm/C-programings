@@ -1,0 +1,66 @@
+//const 的形参和实参
+
+const int ci = 42;
+int i = ci;
+
+int * const p  = &i;//const 是顶层，故不能给P赋值
+*p = 0;//正确，通过p改变内容是允许的
+
+void fcn(const int i)
+
+void fcn(const int i)
+void fcn(int i){}//重复定义了fcn(int)
+
+###指针或引用形参与const
+
+int i = 42;
+const int *cp = &i;//not change cp adress ,就是不能给cp赋值地址
+const int &r = i;//true
+const int &r2 = 42;//true
+
+int *p = cp //flase:p的类型与cp的类型不匹配
+int &r3 = r;//flase;类型不匹配
+int &r4 = 42;//不能用字面值初始化常量引用
+
+
+//传参
+int i = 0;
+const int ci = i;
+
+string::size_type ctr = 0;
+
+reset(&i);//true
+
+reset(&ci)//error
+reset(i);//true
+reset(ci);//error
+reset(42);//error
+reset(ctr);//error
+
+//要想调用引用版本的reset,只能使用int类型对象,而不能使用字面值,求值结果为int的表达式,需要转换的对象
+//或者const int 类型对象
+//尽量使用常量引用
+
+
+
+find_char("Hello World",'o',ctr);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
