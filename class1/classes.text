@@ -7,3 +7,27 @@ class X
 {
   Y y;
 };
+
+typedef string Type
+Type initVal();
+class Exercise{
+  public:
+    typedef double Type;
+    Type setVal(Type);
+    Type initVal();
+  private:
+    int val;
+  Type Exercise::setVal(Type parm){
+    val = parm + initVal();
+    return val;
+  }
+}
+//最后一个有问题
+Exercise::Type Exercise::setVal(Type parm){
+  val = parm + initVal();
+  return val;
+}
+
+
+
+
